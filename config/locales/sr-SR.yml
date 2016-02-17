@@ -41,8 +41,8 @@ sr-SR:
         presentation: Prikazana vrednost
       spree/order:
         checkout_complete: Porudžbina uspešna
-        completed_at: Završeno u
-        considered_risky: Rizično
+        completed_at: Završeno
+        considered_risky: Rizik
         coupon_code: Coupon Code
         created_at: Datum porudžbine
         email: E-Mail kupca
@@ -52,7 +52,7 @@ sr-SR:
         payment_state: Stanje uplate
         shipment_state: Stanje isporuke
         special_instructions: Dodatne specifikacije
-        state: Stanje
+        state: Stanje porudžbine
         total: Ukupno
       spree/order/bill_address:
         address1: Ulica fakturisanja
@@ -86,342 +86,343 @@ sr-SR:
         shipping_category: Kategorija isporuke
         tax_category: Kategorija oporezivanja
       spree/promotion:
-        advertise: Bewerben
+        advertise: Promoviši
         code: Code
-        description: Beschreibung
-        event_name: Event Name
-        expires_at: Läuft aus am
-        name: Name
-        path: Pfad
-        starts_at: Beginnt am
-        usage_limit: Begrenztes Kontingent
+        description: Opis
+        event_name: Naziv događaja
+        expires_at: Ističe
+        name: Naziv
+        path: Putanja (path)
+        starts_at: Počinje
+        usage_limit: Broj upotreba
       spree/promotion_category:
-        name: Werbungskategorie
+        name: Kategorija promocije
       spree/property:
-        name: Name
-        presentation: Angezeigter Wert
+        name: Naziv
+        presentation: Prikazana vrednost
       spree/prototype:
-        name: Name
+        name: Naziv
       spree/return_authorization:
-        amount: Anzahl
+        amount: Količina
       spree/role:
-        name: Name
+        name: Naziv
       spree/shipment:
-        number: Nummer
+        number: Broj
       spree/state:
-        abbr: Abkürzung
-        name: Name
+        abbr: Skraćenica
+        name: Naziv
       spree/state_change:
-        state_changes: Statusänderungen
-        state_from: Status geändert von
-        state_to: Status geändert zu
-        timestamp: Zeitpunkt
-        type: Typ
-        updated: Geändert am
-        user: Benutzer
+        state_changes: Promene stanja
+        state_from: Stanje promenjeno iz
+        state_to: Stanje promenjeno na
+        timestamp: Vremenski pečat
+        type: Tip
+        updated: Promenjeno
+        user: Korisnik
       spree/store:
-        mail_from_address: Versandadresse
-        meta_description: Seitenbeschreibung
-        meta_keywords: Stichwörter
-        name: Name des Shops
-        seo_title: Name (Suchmaschinenoptimiert)
-        url: Adresse des Shops
+        mail_from_address: E-mail od
+        meta_description: Opis (za pretraživače - SEO)
+        meta_keywords: Ključne reči (za pretraživače - SEO)
+        name: Naziv sajta
+        seo_title: Naslov (za pretraživače - SEO)
+        url: Link ka sajtu
       spree/tax_category:
-        description: Beschreibung
-        name: Name
+        description: Opis
+        name: Naziv
       spree/tax_rate:
-        amount: Satz
-        included_in_price: Im Preis enthalten
-        show_rate_in_label: Zeige Steuersatz im Label
+        amount: Poreska stopa
+        included_in_price: Uključeno u cenu
+        show_rate_in_label: Prikaži poresku stopu (etiketa)
       spree/taxon:
-        name: Name
+        name: Naziv
         permalink: Permalink
-        position: Posten
+        position: Pozicija
       spree/taxonomy:
-        name: Name
+        name: Naziv
       spree/user:
-        email: E-Mail
-        password: Passwort
-        password_confirmation: Passwort Bestätigung
+        email: E-mail
+        password: Lozinka
+        password_confirmation: Potvrda lozinke
       spree/variant:
-        cost_currency: Kostenwährung
-        cost_price: Einkaufspreis
-        depth: Tiefe
-        height: Höhe
-        price: Preis
-        sku: Artikelnummer
-        weight: Gewicht
-        width: Breite
+        cost_currency: Valuta
+        cost_price: Cena
+        depth: Dubina
+        height: Visina
+        price: Cena
+        sku: Broj artikla
+        weight: Težina
+        width: Širina
       spree/zone:
-        description: Beschreibung
-        name: Name
+        description: Opis
+        name: Naziv
     errors:
       models:
         spree/calculator/tiered_flat_rate:
           attributes:
             base:
-              keys_should_be_positive_number: Preisstaffel-Beschreiber sollten größer 0 sein
+              keys_should_be_positive_number: Pozitivni brojevi
             preferred_tiers:
-              should_be_hash: Sollte einen Hash darstellen
+              should_be_hash: Rezultat smestiti u Hash
         spree/calculator/tiered_percent:
           attributes:
             base:
-              keys_should_be_positive_number: Preisstaffel-Beschreiber sollten größer 0 sein
-              values_should_be_percent: Wert sollte in Prozent angegeben sein
+              keys_should_be_positive_number: Pozitivni brojevi
+              values_should_be_percent: Vrednosti u procentima
             preferred_tiers:
-              should_be_hash: Sollte einen Hash darstellen
+              should_be_hash: Rezultat smestiti u Hash
         spree/classification:
           attributes:
             taxon_id:
-              already_linked: Ist bereits mit dem Produkt verknüpft.
+              already_linked: Već povezano s proizvodom
         spree/credit_card:
           attributes:
             base:
-              card_expired: Karte abgelaufen
-              expiry_invalid: Falsches Ablaufdatum
+              card_expired: Kartica istekla
+              expiry_invalid: Pogrešan datum isteka
         spree/line_item:
           attributes:
             currency:
-              must_match_order_currency: Muss mit der Bestellungswährung übereinstimmen
+              must_match_order_currency: Mora se poklopiti sa valutom porudžbine
         spree/product:
           attributes:
             base:
-              cannot_destroy_if_attached_to_line_items: Produkte können nicht gelöscht werden wenn sie in einem Einzelposten sind
+              cannot_destroy_if_attached_to_line_items: Proizvod ne može biti obrisan dok je među stavkama porudžbine
         spree/refund:
           attributes:
             amount:
-              greater_than_allowed: Maximalwert überschritten
+              greater_than_allowed: Prekoračen maksimum
         spree/reimbursement:
           attributes:
             base:
-              return_items_order_id_does_not_match: Ein oder mehrere Artikel stimmen mit der zu Erstattenden Bestellung nicht überein.
+              return_items_order_id_does_not_match: Jedan ili više artikala se ne podudaraju sa porudžbinom za naknadu.
         spree/return_item:
           attributes:
             inventory_unit:
-              other_completed_return_item_exists: "%{inventory_unit_id} wurde bereits von %{return_item_id} eingenommen"
+              other_completed_return_item_exists: "%{inventory_unit_id} je već zauzet od strane %{return_item_id}"
             reimbursement:
-              cannot_be_associated_unless_accepted: Muss vor der Verknüpfung akzeptiert werden.
+              cannot_be_associated_unless_accepted: Ne može biti povezan pre prihvatanja.
         spree/store:
           attributes:
             base:
-              cannot_destroy_default_store: Kann den Standard-Store nicht löschen
+              cannot_destroy_default_store: Ne možete obrisati standardni Store
         spree/variant:
           attributes:
             base:
-              cannot_destroy_if_attached_to_line_items: Variante kann nicht gelöscht werden wenn sie zu einem Einzelposten gehört
+              cannot_destroy_if_attached_to_line_items: Varijanta ne može biti obrisana dok je među stavkama porudžbine
+
     models:
       spree/address:
-        one: Adresse
-        other: Adressen
+        one: Adresa
+        other: Adrese
       spree/country:
-        one: Land
-        other: Länder
+        one: Država
+        other: Države
       spree/credit_card:
-        one: Kreditkarte
-        other: Kreditkarten
+        one: Kreditna kartica
+        other: Kreditne kartice
       spree/customer_return:
-        one: Kundenrückersendung
-        other: Kundenrücksendungen
+        one: Vraćanje od kupca
+        other: Vraćanja od kupca
       spree/inventory_unit:
-        one: Inventarnummer
-        other: Inventarnummern
+        one: Jedinica inventara
+        other: Jedinice inventara
       spree/line_item:
-        one: Einzelposten
-        other: Einzelposten
+        one: Stavka
+        other: Stavke
       spree/option_type:
-        one: Gewählte Opion
-        other: Gewählte Opionen
+        one: Izabrana opcija
+        other: Izabrane opcije
       spree/option_value:
-        one: Gewählter Opionswert
-        other: Gewählte Opionswerte
+        one: Vrednost izabrane opcije
+        other: Vrednosti izabranih opcija
       spree/order:
-        one: Bestellung
-        other: Bestellungen
+        one: Porudžbina
+        other: Porudžbine
       spree/payment:
-        one: Bezahlung
-        other: Bezahlungen
+        one: Isplata
+        other: Isplate
       spree/payment_method:
-        one: Zahlungsart
-        other: Zahlungsarten
+        one: Način plaćanja
+        other: Načini plaćanja
       spree/product:
-        one: Produkt
-        other: Produkte
+        one: Proizvod
+        other: Proizvodi
       spree/promotion:
-        one: Werbung
-        other: Werbungen
+        one: Promocija
+        other: Promocije
       spree/promotion_category:
-        one: Werbungskategorie
-        other: Werbungskategorie
+        one: Kategorije promocije
+        other: Kategorije promocije
       spree/property:
-        one: Eigenschaft
-        other: Eigenschaften
+        one: Imovina
+        other: Imovine
       spree/prototype:
-        one: Prototyp
-        other: Prototypen
+        one: Prototip
+        other: Prototipovi
       spree/refund_reason:
-        one: Begründung der Gutschrift
-        other: Gutschriftsbegründungen
+        one: Obrazloženje kompenzacije
+        other: Obrazloženja kompenzacija
       spree/reimbursement:
-        one: Vergütung
-        other: Vergütungen
+        one: Kompenzacija kupcu
+        other: Kompenzacije kupcima
       spree/reimbursement_type:
-        one: Vergütungstyp
-        other: Vergütungstypen
+        one: Tip kompenzacije
+        other: Tipovi kompenzacije
       spree/return_authorization:
-        one: Rückgabebewilligung
-        other: Rückgabebewilligungen
+        one: Odobrenje povraćaja
+        other: Odobrenja povraćaja
       spree/return_authorization_reason:
-        one: Rückgabebewilligungsgrund
-        other: Rückgabebewilligungsgründe
+        one: Razlog odobrenja povraćaja
+        other: Razlozi odobrenja povraćaja
       spree/role:
-        one: Rolle
-        other: Rollen
+        one: Uloga
+        other: Uloge
       spree/shipment:
-        one: Lieferung
-        other: Lieferungen
+        one: Isporuka
+        other: Isporuke
       spree/shipping_category:
-        one: Versandkategorie
-        other: Versandkategorien
+        one: Kategorija isporuke
+        other: Kategorije isporuke
       spree/shipping_method:
-        one: Versandtyp
-        other: Versandtypen
+        one: Način isporuke
+        other: Načini isporuke
       spree/state:
-        one: Bundesland
-        other: Bundesländer
+        one: Stanje
+        other: Stanja
       spree/state_change:
-        one: Statusänderung
-        other: Statusänderungen
+        one: Promena stanja
+        other: Promene stanja
       spree/stock_location:
-        one: Lagerstätte
-        other: Lagerstätten
+        one: Lokacija zaliha
+        other: Lokacije zaliha
       spree/stock_movement:
-        one: Lagerbewegung
-        other: Lagerbewegungen
+        one: Kretanje zaliha
+        other: Kretanja zaliha
       spree/stock_transfer:
-        one: Umlagerung
-        other: Umlagerungen
+        one: Preraspodela zaliha
+        other: Preraspodele zaliha
       spree/tax_category:
-        one: Steuerkategorie
-        other: Steuerkategorien
+        one: Kategorija poreza
+        other: Kategorije poreza
       spree/tax_rate:
-        one: Steuersatz
-        other: Steuersätze
+        one: Poreska stopa
+        other: Poreske stope
       spree/taxon:
-        one: Produktklasse
-        other: Produktklassen
+        one: Poreska kategorija
+        other: Poreske kategorije
       spree/taxonomy:
-        one: Produktklassifizierung
-        other: Produktklassifizierungen
+        one: Kategorisanje proizvoda
+        other: Kategorisanja proizvoda
       spree/tracker:
-        one: Paketverfolgung
-        other: Paketverfolgungen
+        one: Praćenje pošiljke
+        other: Praćenja pošiljke
       spree/user:
-        one: Benutzer
-        other: Benutzer
+        one: Korisnik
+        other: Korisnici
       spree/variant:
-        one: Variante
-        other: Varianten
+        one: Varijanta
+        other: Varijante
       spree/zone:
-        one: Gebiet
-        other: Gebiete
+        one: Područje
+        other: Područja
   devise:
     confirmations:
-      confirmed: Ihr Konto wurde erfolgreich bestätigt. Sie sind jetzt angemeldet.
-      send_instructions: Sie erhalten in wenigen Minuten eine E-Mail mit Hinweisen zur Bestätigung Ihres Kontos.
+      confirmed: Vaš nalog je uspešno potvrđen. Sada ste prijavljeni.
+      send_instructions: Kroz nekoliko minuta će Vam stići E-mail sa uputstvom za potvrdu naloga.
     failure:
-      inactive: Ihr Konto wurde noch nicht aktiviert.
-      invalid: Ungültige Email Adresse oder Passwort
-      invalid_token: Ungültiges Authentifikationstoken
-      locked: Ihr Konto ist gesperrt.
-      timeout: Ihre Sitzung ist abgelaufen, bitte melden sie sich wieder an um fortzufahren.
-      unauthenticated: Zum Fortfahren müssen Sie sich registrieren oder angemeldet sein.
-      unconfirmed: Sie müssen ihr Konto bestätigen bevor sie fortfahren können.
+      inactive: Vaš nalog još uvek nije aktiviran.
+      invalid: Nevažeća E-mail adresa ili lozinka
+      invalid_token: Nevažeći “authentication token”
+      locked: Vaš nalog je zaključan.
+      timeout: Vaša sesija je istekla, molimo Vas da se ponovo prijavite za nastavak.
+      unauthenticated: Da biste nastavili, molimo Vas da se registrujete ili prijavite.
+      unconfirmed: Da biste nastavili, molimo Vas da potvrdite Vaš nalog.
     mailer:
       confirmation_instructions:
-        subject: Bestätigungshinweise
+        subject: Uputstvo za potvrdu naloga
       reset_password_instructions:
-        subject: Anleitung zum Zurücksetzen Ihres Passworts
+        subject: Uputstvo za promenu lozinke
       unlock_instructions:
-        subject: Anleitung zum Entsperren
+        subject: Uputstvo za otključavanje naloga
     oauth_callbacks:
-      failure: Sie konnten nich über %{kind} autorisiert werden, weil %{reason}.
-      success: Erfolgreich mit %{kind} Konto autorisiert.
+      failure: Ne možete se prijaviti preko %{kind}, zbog %{reason}.
+      success: Uspešno ste se prijavili preko %{kind}.
     unlocks:
-      send_instructions: Sie erhalten in wenigen Minuten eine E-Mail mit einer Anleitung zum Entsperren Ihres Kontos.
-      unlocked: Ihr Konto wurde erfolgreich entsperrt. Sie sind jetzt angemeldet.
+      send_instructions: Kroz nekoliko minuta će Vam stići E-mail sa uputstvom za otključavanje naloga.
+      unlocked: Vaš nalog je uspešno otključan. Sada ste prijavljeni.
     user_passwords:
       user:
-        cannot_be_blank: Ihr Passwort darf nicht leer sein.
-        send_instructions: Sie erhalten in wenigen Minuten eine E-Mail mit einer Anleitung zum Zurücksetzen Ihres Passworts.
-        updated: Ihr Password wurde erfolgreich geändert. SIe sind jetzt angemeldet.
+        cannot_be_blank: Vaša lozinka ne može biti prazna.
+        send_instructions: Kroz nekoliko minuta će Vam stići E-mail sa uputstvom za promenu lozinke.
+        updated: Vaša lozinka je uspešno promenjena. Sada ste prijavljeni.
     user_registrations:
-      destroyed: Auf Wiedersehen! Ihr Konto wurde erfolgreich gelöscht. Wir hoffen sie bald wieder begrüßen zu dürfen.
-      inactive_signed_up: Sie haben sich erfolgreich registriert. Wir konnten sie aber nicht anmelden, denn %{reason}.
-      signed_up: Willkommen! Sie haben sich erfolgreich registriert.
-      updated: Sie haben ihr Konto erfolgreich aktualisiert.
+      destroyed: Doviđenja! Vaš nalog je uspešno obrisan. Nadamo se da ćemo Vas uskoro ponovo ugostiti.
+      inactive_signed_up: Uspešno ste se registrovali. Ipak, nismo Vas mogli prijaviti zbog %{reason}.
+      signed_up: Dobro došli! Uspešno ste se registrovali.
+      updated: Uspešno ste aktivirali nalog.
     user_sessions:
-      signed_in: Erfolgreich angemeldet.
-      signed_out: Erfolgreich abgemeldet.
+      signed_in: Uspešno ste se prijavili.
+      signed_out: Uspešno ste se odjavili.
   errors:
     messages:
-      already_confirmed: wurde bereits bestätigt
-      not_found: nicht gefunden
-      not_locked: war nicht gesperrt
-      not_saved:
-        one: 'Ein Fehler hat das Speichern von %{resource} verhindert:'
-        other: "%{count} Fehler haben das Speichern von %{resource} verhindert:"
+      already_confirmed: već potvrđeno
+      not_found: nije pronađeno
+      not_locked: nije zaključano
+      not_saved: nije sačuvano
+        one: 'Jedna greška je sprečila da %{resource} bude sačuvan:'
+        other: "%{count} greške su sprečile da %{resource} bude sačuvan:"
   number:
     percentage:
       format:
         precision: '1'
   spree:
-    abbreviation: Abkürzung
-    accept: Akzeptieren
-    acceptance_errors: Akzeptanzfehler
-    acceptance_status: Akzeptanzstatus
-    accepted: Akzeptiert
-    account: Konto
-    account_updated: Konto aktualisiert!
-    action: Aktion
+    abbreviation: Skraćenica
+    accept: Prihvati
+    acceptance_errors: Greške
+    acceptance_status: Prihvaćenost
+    accepted: Prihvaćeno
+    account: Nalog
+    account_updated: Nalog izmenjen!
+    action: Akcija
     actions:
       actions:
-        cancel: Abbrechen
-        destroy: Zerstören
-        edit: Bearbeiten
-        save: Speichern
-      cancel: abbrechen
-      continue: Weiter
-      create: erstellen
-      destroy: löschen
-      edit: Bearbeiten
-      list: auflisten
-      listing: Liste
-      new: neu
-      refund: Gutschrift
-      save: Speichern
-      update: aktualisieren
-    activate: Aktivieren
-    active: Aktiv
-    add: Hinzufügen
-    add_action_of_type: Aktion hinzufügen
-    add_country: Land hinzufügen
-    add_coupon_code: Gutscheincode hinzufügen
-    add_new_header: Header hinzufügen
-    add_new_style: Stil hinzufügen
-    add_one: Hinzufügen
-    add_option_value: Optionswert hinzufügen
-    add_product: Produkt hinzufügen
-    add_product_properties: Produkteigenschaft hinzufügen
-    add_rule_of_type: Regel hinzufügen
-    add_state: Bundesland hinzufügen
-    add_stock: Lager hinzufügen
-    add_stock_management: Lagerverwaltung hinzufügen
-    add_to_cart: In den Warenkorb
-    add_variant: Variante hinzufügen
-    additional_item: Kosten für weiteren Artikel
-    address: Adresse
-    address1: Adresse
-    address2: Adresse (Zusatz)
+        cancel: Odustani
+        destroy: Obriši
+        edit: Izmeni
+        save: Sačuvaj
+      cancel: Odustani
+      continue: Nastavi
+      create: Kreiraj
+      destroy: Obriši
+      edit: Izmeni
+      list: Izlistaj
+      listing: Lista
+      new: Novo
+      refund: Nadoknada
+      save: Sačuvaj
+      update: Sačuvaj izmene
+    activate: Aktiviraj
+    active: Aktivno
+    add: Dodaj
+    add_action_of_type: Dodaj akciju
+    add_country: Dodaj državu
+    add_coupon_code: Dodaj kupon
+    add_new_header: Dodaj novo zaglavlje
+    add_new_style: Dodaj novi stil
+    add_one: Dodaj jedan
+    add_option_value: Dodaj vrednost opcije
+    add_product: Dodaj proizvod
+    add_product_properties: Dodaj svojstva proizvoda
+    add_rule_of_type: Dodaj pravilo
+    add_state: Dodaj pokrajinu
+    add_stock: Dodaj zalihe
+    add_stock_management: Dodaj upravljanje zalihama
+    add_to_cart: Dodaj u korpu
+    add_variant: Dodaj varijantu
+    additional_item: Dodatna stavka
+    address: Adresa
+    address1: Adresa
+    address2: Adresa (nastavak)
     adjustable: Anpassbar
     adjustment: Anpassung
     adjustment_amount: Betrag
