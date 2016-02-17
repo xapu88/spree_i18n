@@ -368,7 +368,7 @@ sr-SR:
       already_confirmed: već potvrđeno
       not_found: nije pronađeno
       not_locked: nije zaključano
-      not_saved: nije sačuvano
+      not_saved:
         one: 'Jedna greška je sprečila da %{resource} bude sačuvan:'
         other: "%{count} greške su sprečile da %{resource} bude sačuvan:"
   number:
